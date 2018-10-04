@@ -26,3 +26,11 @@ Route::delete('/roomTypes/{hotRoomType}', 'RoomTypesController@destroy')->name('
 Route::get('/rooms', 'HotRoomController@getAll')->name('rooms');
 Route::get('/rooms/new', 'HotRoomController@create')->name('roomsNew');
 Route::post('/rooms/store', 'HotRoomController@store');
+
+//SERVICIO A LA HABITACIÓN
+Route::get('/roomServices', 'RoomServicesController@getAll')->name('roomServices');
+Route::get('/roomServices/new', 'RoomServicesController@create')->name('roomServicesNew');
+Route::post('/roomServices/store', 'RoomServicesController@store');
+Route::put('/roomServices/{hotRoomServices}', 'RoomServicesController@update');
+Route::get('/roomServices/{hotRoomServices}/edit', 'RoomServicesController@edit')->name('roomServicesEdit');
+Route::delete('/roomServices/{hotRoomServices}', 'RoomServicesController@destroy')->name('roomServicesDestroy');

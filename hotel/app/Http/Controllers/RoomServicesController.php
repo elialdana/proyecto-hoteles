@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\HotRoomType;
+use App\HotRoomServices;
 
 class RoomServicesController extends Controller
 {
     public function getAll(){
 
-        $data = HotRoomType::all();
+        $data = HotRoomServices::all();
 
         return view('roomServicesVw',compact('data'));
     }
@@ -31,7 +31,7 @@ class RoomServicesController extends Controller
 
         //dd($data);
 
-        HotRoomType::create([
+        HotRoomServices::create([
             'name' => $data['name'],
             'price' => $data['price'],
             'description' => $data['description']
@@ -52,7 +52,7 @@ class RoomServicesController extends Controller
             'description' => ''
         ]);
 
-        $hotRoomType->update($data);
+        $hotRoomServices->update($data);
 
         return redirect()->route('roomServices', ['hotRoomServices', $hotRoomServices]);
     }

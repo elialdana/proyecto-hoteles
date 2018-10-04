@@ -86,6 +86,7 @@
                     <a href="{{ route('rooms') }}">Habitaciones</a>
                     <a href="https://laravel-news.com">Pagos</a>
                     <a href="https://nova.laravel.com">Usuarios</a>
+                    <a href="{{route('roomServices')}}">Servicios</a>
                     <a href="https://forge.laravel.com">Servicios Consumidos</a>
                     <a href="https://github.com/laravel/laravel">Reservaciones</a>
                 </div>
